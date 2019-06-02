@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="skeleton.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Fun with colors</title>
+</head>
+<body onload="init()">
+  <div class="container">
+    <h1 id="header">Color Playground</h1>
+    <p id="subheader">This is practice for me and fun for you 😉</p>
+      <div id="backgroundPlayground" onclick="changeBackground()">
+        <h1>Press me 👆</h1>
+        <h2></h2>
+        <p>Loop Speed: <strong><span id="UIoutputLoopSpeedTime"></span></strong> ms!</p>
+      </div>
+      <div id="statusBox">
+        <p id="statusText"></p>
+      </div>
+      <div id="containerLoopBg">
+        <input type="number" id="iptLoopSpeedTime" placeholder="Enter a loop speed in milliseconds">
+        <div id="containerLoopBgBtns">
+          <button onclick="loopBg()" id="btnStartLoop">Start Loop!</button>
+          <button id="btnClearLoop">Stop Loop</button>
+        </div>
+      </div>
+    </div>
+  
+  <script src="app.js"></script>
+
+</body>
+</html>
