@@ -104,7 +104,6 @@ function loopBg() {
 		backgroundPlaygroundColorDisplay.innerText = UIGETloopSpeedTime.value;
 		backgroundPlaygroundSubheader.style.display = 'none';
 		backgroundPlaygroundHeader.innerHTML = '🔁';
-		backgroundPlayground.style.height = '300px';
 		window.scrollTo(0, 0);
 		UIbtnClearLoop.style.display = 'block';
 		UIbtnStartLoop.style.display = 'none';
@@ -118,7 +117,6 @@ function loopBg() {
 			showAlert('Loop stopped!', 'success', 2000);
 			UIbtnClearLoop.style.display = 'none';
 			UIbtnStartLoop.style.display = 'block';
-			backgroundPlayground.style.height = '250px';
 			backgroundPlaygroundHeader.innerHTML = 'Press me 👆';
 			UIGETloopSpeedTime.value = '';
 			backgroundPlaygroundSubheader.style.display = 'block';
