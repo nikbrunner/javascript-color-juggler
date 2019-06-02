@@ -4,7 +4,6 @@
 	[ ] button press design
 			- shadow
 			- 'click' effect
-	[ ] bigger input bar
 
 */
 
@@ -76,6 +75,16 @@ button {
 	transition: background-color .1s ease-in-out;
 	/* -webkit-filter: grayscale(75%); */
 	/* filter: grayscale(50%); */
+}
+
+.btn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+	transform: translateY(-1px);
+	box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
 }
 
 .success,
@@ -163,6 +172,16 @@ button {
 	-webkit-transition: background-color .3s ease-in-out;
 	transition: background-color .3s ease-in-out;
 	transition: height .5s ease-in-out;
+}
+
+#backgroundPlayground:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+#backgroundPlayground:active {
+	transform: translateY(-1px);
+	box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
 }
 
 #backgroundPlayground h1 {
