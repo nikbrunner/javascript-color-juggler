@@ -71,8 +71,8 @@ body {
 }
 
 button {
-	-webkit-transition: background-color .1s ease-in-out;
-	transition: background-color .1s ease-in-out;
+	-webkit-transition: background-color .3s ease-in-out;
+	transition: background-color .3s ease-in-out;
 	/* -webkit-filter: grayscale(75%); */
 	/* filter: grayscale(50%); */
 }
@@ -167,11 +167,8 @@ button {
 	height: 250px;
 	transform: scaleX(1);
 	border-radius: 5px;
-	-webkit-filter: grayscale(0%);
-	filter: grayscale(0%);
 	-webkit-transition: background-color .3s ease-in-out;
 	transition: background-color .3s ease-in-out;
-	transition: height .5s ease-in-out;
 }
 
 #backgroundPlayground:hover {

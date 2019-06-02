@@ -10,3 +10,5 @@ It is not yet finished and need some refactoring.
 - [ ] Minify
 - [ ] Build Folder
 - [ ] Fix placholder input text
+- [x] Fix main transition
+- [ ] Increase main container height when starting loop

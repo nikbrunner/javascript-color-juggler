@@ -16,7 +16,7 @@ function init() {
 	showAlert('Press the button or set a loop!', 'note', 10000);
 	UIbtnClearLoop.style.display = 'none';
 	backgroundPlaygroundText.style.display = 'none';
-	setIntervalX(changeBackground, 1000, 5);
+	setIntervalX(changeBackground, 1000, 3);
 	backgroundPlayground.style.transition = 'background-color 1s ease-in-out';
 }
 
@@ -58,7 +58,6 @@ function adjustColorsByLum(color) {
 		backgroundPlaygroundSubheader.style.color = '#232323';
 		backgroundPlaygroundText.style.color = '#232323';
 		backgroundPlaygroundColorDisplay.style.color = '#232323';
-		// UIbtnClearLoop.style.color = 'red';
 	} else {
 		body.style.backgroundColor = 'whitesmoke';
 		subheader.style.color = '#232323';
@@ -66,7 +65,6 @@ function adjustColorsByLum(color) {
 		backgroundPlaygroundSubheader.style.color = 'whitesmoke';
 		backgroundPlaygroundText.style.color = 'whitesmoke';
 		backgroundPlaygroundColorDisplay.style.color = 'whitesmoke';
-		// UIbtnClearLoop.style.color = 'red';
 	}
 }
 
@@ -90,38 +88,47 @@ function loopBg() {
 		showAlert('Please choose only positive numbers!', 'error', 2000);
 	} else {
 		if (UIGETloopSpeedTime.value < 100) {
-			backgroundPlayground.style.transition = 'background-color .0s ease-in-out';
-			header.style.transition = 'background-color .0s ease-in-out';
-			body.style.transition = 'background-color .0s ease-in-out';
 			buttons.forEach((button) => {
 				button.style.transition = 'background-color .0s ease-in-out';
 			});
+			body.style.transition = 'background-color .0s ease-in-out';
+			backgroundPlayground.style.transition = 'background-color .0s ease-in-out';
+			header.style.transition = 'background-color .0s ease-in-out';
+		} else {
+			if (UIGETloopSpeedTime.value > 100) {
+				buttons.forEach((button) => {
+					button.style.transition = 'background-color .3s ease-in-out';
+				});
+				body.style.transition = 'background-color .3s ease-in-out';
+				backgroundPlayground.style.transition = 'background-color .3s ease-in-out';
+				header.style.transition = 'background-color .3s ease-in-out';
+			}
 		}
 
 		// Set Loop speed time
 		showAlert(`Loop set with a speed of ${UIGETloopSpeedTime.value} ms!`, 'success', 2000);
 
 		backgroundPlaygroundColorDisplay.innerText = UIGETloopSpeedTime.value;
-		backgroundPlaygroundSubheader.style.display = 'none';
 		backgroundPlaygroundHeader.innerHTML = '🔁';
-		window.scrollTo(0, 0);
+		backgroundPlaygroundSubheader.style.display = 'none';
+		backgroundPlaygroundText.style.display = 'block';
 		UIbtnClearLoop.style.display = 'block';
 		UIbtnStartLoop.style.display = 'none';
 		UIGETloopSpeedTime.style.opacity = '0';
-		backgroundPlaygroundText.style.display = 'block';
+		window.scrollTo(0, 0);
 		// Set loop
 		let loop = setInterval(changeBackground, UIGETloopSpeedTime.value);
 		// Clear button listener
 		UIbtnClearLoop.addEventListener('click', function() {
 			clearInterval(loop);
 			showAlert('Loop stopped!', 'success', 2000);
+			backgroundPlaygroundHeader.innerHTML = 'Press me 👆';
+			backgroundPlaygroundSubheader.style.display = 'block';
+			backgroundPlaygroundText.style.display = 'none';
 			UIbtnClearLoop.style.display = 'none';
 			UIbtnStartLoop.style.display = 'block';
-			backgroundPlaygroundHeader.innerHTML = 'Press me 👆';
-			UIGETloopSpeedTime.value = '';
-			backgroundPlaygroundSubheader.style.display = 'block';
 			UIGETloopSpeedTime.style.opacity = '1';
-			backgroundPlaygroundText.style.display = 'none';
+			UIGETloopSpeedTime.value = '';
 		});
 	}
 }
