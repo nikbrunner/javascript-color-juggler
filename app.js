@@ -16,7 +16,8 @@ function init() {
 	showAlert('Press the button or set a loop!', 'note', 10000);
 	UIbtnClearLoop.style.display = 'none';
 	backgroundPlaygroundText.style.display = 'none';
-	setIntervalX(changeBackground, 500, 5);
+	setIntervalX(changeBackground, 1000, 5);
+	backgroundPlayground.style.transition = 'background-color 1s ease-in-out';
 }
 
 function changeBackground() {
@@ -104,6 +105,7 @@ function loopBg() {
 		backgroundPlaygroundSubheader.style.display = 'none';
 		backgroundPlaygroundHeader.innerHTML = '🔁';
 		backgroundPlayground.style.height = '300px';
+		window.scrollTo(0, 0);
 		UIbtnClearLoop.style.display = 'block';
 		UIbtnStartLoop.style.display = 'none';
 		UIGETloopSpeedTime.style.opacity = '0';
