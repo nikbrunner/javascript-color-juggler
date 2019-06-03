@@ -34,7 +34,7 @@
 
 #colorBox:active {
 	transform: translateY(-1px);
-	box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+	box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
 }
 
 #colorBox h1 {

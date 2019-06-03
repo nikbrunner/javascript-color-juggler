@@ -11,10 +11,12 @@ const colorBoxSubheader = document.querySelector('#colorBox h2');
 const colorBoxText = document.querySelector('#colorBox p');
 const inputloopSpeed = document.getElementById('inputLoopSpeed');
 const header = document.getElementById('header');
-// const subheader = document.getElementById('subheader');
 
 function init() {
-	showAlert('Press the button or set a loop!', 'note', 10000);
+	showAlert('Press the button or set a loop!', 'note', 5000);
+	setTimeout(() => {
+		showAlert('Touch the RGB Value to copy it!', 'note', 5000);
+	}, 5500);
 	btnClearLoop.style.display = 'none';
 	colorBoxText.style.display = 'none';
 	setIntervalX(changeBackground, 750, 3);
@@ -32,15 +34,24 @@ function changeBackground() {
 	colorBox.style.backgroundColor = color;
 	colorBoxSubheader.innerHTML = `${color.toUpperCase()}`;
 	adjustColorsByLum(color);
-	console.log(color);
 }
 
-// function copyColor(color) {
-// 	const copiedColor = color;
-// 	copiedColor.select();
-// 	document.execCommand('copy');
-// 	showAlert(`Color copied to the clipboard`, 'success', 3000);
-// }
+colorBoxSubheader.addEventListener('click', copyColor);
+
+function copyColor(color) {
+	if (color.target.className === 'colorBoxColorDisplay') {
+		const colorValue = color.target.innerText;
+		const copiedColor = document.createElement('input');
+		// copiedColor.style.display = 'none';
+		document.body.appendChild(copiedColor);
+		copiedColor.value = colorValue;
+		copiedColor.select();
+		document.execCommand('copy');
+		document.body.removeChild(copiedColor);
+		alertBox.style.backgroundColor = colorValue;
+		showAlert(`${colorValue} copied!`, 'success', 3000);
+	}
+}
 
 function randomColor() {
 	const r = Math.floor(Math.random() * 256); // pick a "red" from 0 - 255
@@ -62,14 +73,18 @@ function adjustColorsByLum(color) {
 
 	if (luminance > 500) {
 		body.style.backgroundColor = '#232323';
-		// subheader.style.color = 'whitesmoke';
+		alertBox.style.color = '#232323';
 		colorBoxHeader.style.color = '#232323';
 		colorBoxSubheader.style.color = '#232323';
 		colorBoxText.style.color = '#232323';
 		colorBoxColorDisplay.style.color = '#232323';
 	} else {
 		body.style.backgroundColor = 'whitesmoke';
-		// subheader.style.color = '#232323';
+		if (alertBox.classList.contains('note')) {
+			alertBox.style.color = '#232323';
+		} else {
+			alertBox.style.color = 'whitesmoke';
+		}
 		colorBoxHeader.style.color = 'whitesmoke';
 		colorBoxSubheader.style.color = 'whitesmoke';
 		colorBoxText.style.color = 'whitesmoke';
