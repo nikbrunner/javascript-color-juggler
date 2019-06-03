@@ -1,0 +1,17 @@
+#inputLoopSpeed {
+	height: 75px;
+	width: 100%;
+	color: #888;
+	font-size: 4rem;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-align: center;
+	-webkit-transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out;
+}
+
+#inputLoopSpeed::placeholder {
+	font-size: 1.5rem;
+	line-height: 75px;
+	transform: translateY(-15px);
+}

@@ -1,0 +1,16 @@
+#alertBox {
+	height: 50px;
+	width: 100%;
+	opacity: 0;
+	border: 1px solid rgba(51, 51, 51, 0.1);
+	border-radius: 5px;
+	text-align: center;
+	-webkit-transition: opacity .3s ease-in-out;
+	transition: opacity .3s ease-in-out;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#alertText {
+	line-height: 50px;
+}

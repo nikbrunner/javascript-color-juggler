@@ -22,7 +22,7 @@ It is not yet finished and need some refactoring.
 - [x] Fix Color Display
   - [x] JS
   - [x] HTML
-- [ ] Better Class Names and IDs
+- [x] Better Class Names and IDs
 - [ ] Fix Button colors
 - [ ] Build Folder
 - [ ] Minify

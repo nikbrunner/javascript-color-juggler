@@ -1,0 +1,35 @@
+button {
+	-webkit-transition: background-color .75s ease-in-out;
+	transition: background-color .75s ease-in-out;
+}
+
+.btn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+	transform: translateY(-1px);
+	box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+}
+
+#btnChangeBG {
+	width: 100%;
+	margin: 10px auto;
+}
+
+#loopInterfaceButtons {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 50px;
+	grid-gap: 10px;
+	height: 50px;
+	font-size: 1rem;
+	margin-bottom: 10px;
+}
+
+#loopInterfaceButtons button {
+	height: 100%;
+	font-size: 2rem;
+}

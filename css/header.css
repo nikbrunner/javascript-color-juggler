@@ -1,0 +1,24 @@
+#header {
+	-webkit-transition: color .5s ease-in-out;
+	transition: color .75s ease-in-out;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#subheader {
+	margin-bottom: 50px;
+	text-align: center;
+	transition: color .5s ease-in-out;
+}
+
+@media (max-width: 414px) {
+	#header {
+		font-size: 3rem;
+	}
+
+	#subheader {
+		font-size: 1.8rem;
+		margin-bottom: 25px;
+	}
+}
