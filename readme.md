@@ -28,6 +28,7 @@ It is not yet finished and need some refactoring.
 - [x] Fix Button colors
 - [x] Styling the header
 - [x] Fix transitions
+- [ ] Working on Responsivness
 - [ ] Build Folder
 - [ ] Add UI functions as a prototype
 - [ ] Fix placholder input text
