@@ -14,7 +14,7 @@
 
 body {
 	position: relative;
-	background-color: whitesmoke;
+	/* background-color: whitesmoke; */
 	z-index: 2;
 	height: 100%;
 	font-size: 2rem;
