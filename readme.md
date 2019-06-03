@@ -23,7 +23,8 @@ It is not yet finished and need some refactoring.
   - [x] JS
   - [x] HTML
 - [x] Better Class Names and IDs
-- [ ] Fix Button colors
+- [x] Fix Button colors
+- [ ] Hide input and alert box space when starting loop
 - [ ] Build Folder
 - [ ] Add UI functions as a prototype
 - [ ] Fix placholder input text

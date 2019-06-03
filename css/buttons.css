@@ -3,14 +3,24 @@ button {
 	transition: background-color .75s ease-in-out;
 }
 
+#btnStartLoop {
+	background-color: mediumseagreen;
+	color: whitesmoke;
+}
+
+#btnClearLoop {
+	background-color: crimson;
+	color: whitesmoke;
+}
+
 .btn:hover {
 	transform: translateY(-3px);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
 }
 
 .btn:active {
 	transform: translateY(-1px);
-	box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+	box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
 }
 
 #btnChangeBG {

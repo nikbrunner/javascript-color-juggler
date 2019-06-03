@@ -4,7 +4,6 @@ const body = document.querySelector('body');
 const btnClearLoop = document.getElementById('btnClearLoop');
 const btnCopyColor = document.getElementById('btnCopyColor');
 const btnStartLoop = document.getElementById('btnStartLoop');
-const buttons = Array.from(document.getElementsByTagName('button'));
 const colorBox = document.getElementById('colorBox');
 const colorBoxColorDisplay = document.querySelector('#outputLoopSpeed');
 const colorBoxHeader = document.querySelector('#colorBox h1');
@@ -29,10 +28,6 @@ function getColor() {
 
 function changeBackground() {
 	const color = getColor();
-	buttons.forEach((button) => {
-		button.style.backgroundColor = color;
-		button.style.color = 'white';
-	});
 	header.style.color = color;
 	colorBox.style.backgroundColor = color;
 	colorBoxSubheader.innerHTML = `${color.toUpperCase()}`;
@@ -101,17 +96,11 @@ function loopColorBox() {
 		showAlert('Please choose only positive numbers!', 'error', 2000);
 	} else {
 		if (GETloopSpeed.value < 100) {
-			buttons.forEach((button) => {
-				button.style.transition = 'background-color .0s ease-in-out';
-			});
 			body.style.transition = 'background-color .0s ease-in-out';
 			colorBox.style.transition = 'background-color .0s ease-in-out';
 			header.style.transition = 'background-color .0s ease-in-out';
 		} else {
 			if (GETloopSpeed.value > 100) {
-				buttons.forEach((button) => {
-					button.style.transition = 'background-color .3s ease-in-out';
-				});
 				body.style.transition = 'background-color .3s ease-in-out';
 				colorBox.style.transition = 'background-color .3s ease-in-out';
 				header.style.transition = 'background-color .3s ease-in-out';

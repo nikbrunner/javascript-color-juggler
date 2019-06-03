@@ -1,16 +1,1 @@
-.success,
-.error {
-	color: white;
-}
 
-.success {
-	background: mediumseagreen;
-}
-
-.error {
-	background: crimson;
-}
-
-.note {
-	background: gold;
-}
