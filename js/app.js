@@ -92,7 +92,7 @@ function setIntervalX(callback, delay, repititions) {
 	}, delay);
 }
 
-function loopBg() {
+function loopColorBox() {
 	if (GETloopSpeed.value === '') {
 		console.log('empty');
 		// alert();

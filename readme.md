@@ -25,9 +25,10 @@ It is not yet finished and need some refactoring.
 - [x] Better Class Names and IDs
 - [ ] Fix Button colors
 - [ ] Build Folder
-- [ ] Minify
+- [ ] Add UI functions as a prototype
 - [ ] Fix placholder input text
 - [ ] Remove Skeleton
 - [ ] Main Container
   - [ ] 4, 5 or 9 boxes
   - [ ] Include a copy color function
+- [ ] Minify
