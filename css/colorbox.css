@@ -43,6 +43,8 @@
 
 .colorBoxColorDisplay {
 	letter-spacing: .1rem;
+	font-size: 5rem !important;
+	letter-spacing: .3rem;
 	font-weight: 600;
 }
 
@@ -60,5 +62,8 @@
 	#colorBox {
 		height: 200px;
 		margin-bottom: 0px;
+	}
+	.colorBoxColorDisplay {
+		font-size: 2rem !important;
 	}
 }
