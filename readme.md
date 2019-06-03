@@ -25,7 +25,7 @@ It is not yet finished and need some refactoring.
 - [x] Better Class Names and IDs
 - [x] Fix Button colors
 - [x] Styling the header
-- [ ] Fix transitions
+- [x] Fix transitions
 - [ ] Build Folder
 - [ ] Add UI functions as a prototype
 - [ ] Fix placholder input text

@@ -1,7 +1,7 @@
 #inputLoopSpeed {
 	height: 75px;
 	width: 100%;
-	color: #888;
+	color: mediumseagreen;
 	font-size: 4rem;
 	font-weight: bold;
 	margin-bottom: 10px;
@@ -13,5 +13,7 @@
 #inputLoopSpeed::placeholder {
 	font-size: 1.5rem;
 	line-height: 75px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
 	transform: translateY(-15px);
 }
