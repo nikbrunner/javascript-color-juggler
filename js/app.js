@@ -11,7 +11,7 @@ const colorBoxSubheader = document.querySelector('#colorBox h2');
 const colorBoxText = document.querySelector('#colorBox p');
 const inputloopSpeed = document.getElementById('inputLoopSpeed');
 const header = document.getElementById('header');
-const subheader = document.getElementById('subheader');
+// const subheader = document.getElementById('subheader');
 
 function init() {
 	showAlert('Press the button or set a loop!', 'note', 10000);
@@ -62,14 +62,14 @@ function adjustColorsByLum(color) {
 
 	if (luminance > 500) {
 		body.style.backgroundColor = '#232323';
-		subheader.style.color = 'whitesmoke';
+		// subheader.style.color = 'whitesmoke';
 		colorBoxHeader.style.color = '#232323';
 		colorBoxSubheader.style.color = '#232323';
 		colorBoxText.style.color = '#232323';
 		colorBoxColorDisplay.style.color = '#232323';
 	} else {
 		body.style.backgroundColor = 'whitesmoke';
-		subheader.style.color = '#232323';
+		// subheader.style.color = '#232323';
 		colorBoxHeader.style.color = 'whitesmoke';
 		colorBoxSubheader.style.color = 'whitesmoke';
 		colorBoxText.style.color = 'whitesmoke';

@@ -2,8 +2,8 @@
 	position: relative;
 	display: block;
 	width: 75%;
-
-	margin: 0 auto;
+	height: auto;
+	margin: 0 auto 5px;
 }
 
 @media (max-width: 414px) {

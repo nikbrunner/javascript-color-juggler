@@ -2,11 +2,12 @@
 	-webkit-transition: color .75s ease-in-out;
 	transition: color .75s ease-in-out;
 	position: relative;
+	top: 0px;
 	font-weight: bold;
 	letter-spacing: .3rem;
 	text-transform: uppercase;
 	text-align: center;
-	margin-bottom: 10px;
+	margin-bottom: 35px;
 	font-family: 'Montserrat', sans-serif;
 	z-index: 10;
 }
@@ -20,7 +21,7 @@
 
 @media (max-width: 414px) {
 	#header {
-		font-size: 3rem;
+		font-size: 3.3rem;
 	}
 
 	#subheader {
