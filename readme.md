@@ -1,5 +1,7 @@
 # Color Playground
 
+![](img/color_juggle_logo.png)
+
 ## Description
 This is a practice i done for myself. Its a simple concept, but it allowed me to train HTML, CSS and much of JavaScript.
 
