@@ -14,9 +14,11 @@ const header = document.getElementById('header');
 
 function init() {
 	showAlert('Press the button or set a loop!', 'note', 5000);
-	setTimeout(() => {
-		showAlert('Also use the copy button! ⬇️', 'note', 5000);
-	}, 5500);
+	if (window.innerHeight >= 1024) {
+		setTimeout(() => {
+			showAlert('Also use the copy button! (Only on Desktop)', 'note', 3000);
+		}, 5500);
+	}
 	btnClearLoop.style.display = 'none';
 	colorBoxText.style.display = 'none';
 	setIntervalX(changeBackground, 750, 3);
@@ -37,36 +39,25 @@ function changeBackground() {
 	adjustColorsByLum(color);
 }
 
-// colorBoxColorDisplay.addEventListener('click', copyColor);
-btnCopyColor.addEventListener('click', btnCopy);
+setTimeout(() => {
+	btnCopyColor.addEventListener('click', btnCopy);
+}, 8000);
 
 function btnCopy() {
-	console.log(colorBoxColorDisplay.textContent);
-	const currentColorValue = colorBoxColorDisplay.textContent;
+	let currentColorValue = colorBoxColorDisplay.textContent;
 	const tempInput = document.createElement('input');
 	document.body.appendChild(tempInput);
+	currentColorValue = currentColorValue.toLowerCase();
 	tempInput.value = currentColorValue;
 	tempInput.select();
 	document.execCommand('copy');
 	document.body.removeChild(tempInput);
 	alertBox.style.backgroundColor = currentColorValue;
 	btnCopyColor.style.backgroundColor = currentColorValue;
-	showAlert(`${currentColorValue} copied!`, 'success', 3000);
+	adjustColorsByLum(currentColorValue);
+	window.scrollTo(0, 0);
+	showAlert(`${currentColorValue.toUpperCase()} copied!`, 'success', 3000);
 }
-
-// function copyColor(color) {
-// 	if (color.target.className === 'colorBoxColorDisplay') {
-// 		const colorValue = color.target.innerText;
-// 		const copiedColor = document.createElement('input');
-// 		document.body.appendChild(copiedColor);
-// 		copiedColor.value = colorValue;
-// 		copiedColor.select();
-// 		document.execCommand('copy');
-// 		document.body.removeChild(copiedColor);
-// 		alertBox.style.backgroundColor = colorValue;
-// 		showAlert(`${colorValue} copied!`, 'success', 3000);
-// 	}
-// }
 
 function randomColor() {
 	const r = Math.floor(Math.random() * 256); // pick a "red" from 0 - 255
