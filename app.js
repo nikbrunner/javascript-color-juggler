@@ -11,27 +11,40 @@ const statusBox = document.getElementById('statusBox');
 const statusText = document.getElementById('statusText');
 const UIbtnClearLoop = document.getElementById('btnClearLoop');
 const UIbtnStartLoop = document.getElementById('btnStartLoop');
+const UIbtnCopyColor = document.getElementById('btnCopyColor');
 
 function init() {
 	showAlert('Press the button or set a loop!', 'note', 10000);
 	UIbtnClearLoop.style.display = 'none';
 	backgroundPlaygroundText.style.display = 'none';
-	setIntervalX(changeBackground, 1000, 3);
+	setIntervalX(changeBackground, 750, 3);
 	backgroundPlayground.style.transition = 'background-color 1s ease-in-out';
 }
 
-function changeBackground() {
+function getColor() {
 	const color = randomColor();
+	return color;
+}
+
+function changeBackground() {
+	const color = getColor();
 	buttons.forEach((button) => {
 		button.style.backgroundColor = color;
 		button.style.color = 'white';
 	});
-
 	header.style.color = color;
 	backgroundPlayground.style.backgroundColor = color;
 	backgroundPlaygroundSubheader.innerHTML = `${color.toUpperCase()}`;
 	adjustColorsByLum(color);
+	console.log(color);
 }
+
+// function copyColor(color) {
+// 	const copiedColor = color;
+// 	copiedColor.select();
+// 	document.execCommand('copy');
+// 	showAlert(`Color copied to the clipboard`, 'success', 3000);
+// }
 
 function randomColor() {
 	const r = Math.floor(Math.random() * 256); // pick a "red" from 0 - 255
@@ -106,7 +119,7 @@ function loopBg() {
 		}
 
 		// Set Loop speed time
-		showAlert(`Loop set with a speed of ${UIGETloopSpeedTime.value} ms!`, 'success', 2000);
+		showAlert(`Loop set with a speed of ${UIGETloopSpeedTime.value} ms!`, 'success', 3000);
 
 		backgroundPlaygroundColorDisplay.innerText = UIGETloopSpeedTime.value;
 		backgroundPlaygroundHeader.innerHTML = '🔁';

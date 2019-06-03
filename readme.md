@@ -5,10 +5,21 @@ This is a practice i done for myself. Its a simple concept, but it allowed me to
 
 It is not yet finished and need some refactoring.
 
-## Todos
+## Functionality
+- Tab the big button
+
+
+## Issues
+- [x] Fix endless loop
+- [x] Fix main transition
 - [ ] Better Class Names and IDs
 - [ ] Minify
 - [ ] Build Folder
 - [ ] Fix placholder input text
-- [x] Fix main transition
-- [ ] Increase main container height when starting loop
+- [ ] Fix Color Display
+  - [ ] JS
+  - [ ] HTML
+- [ ] Remove Skeleton
+- [ ] Main Container
+  - [ ] 4, 5 or 9 boxes
+  - [ ] Include a copy color function
