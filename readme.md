@@ -1,4 +1,4 @@
-# Color Playground
+# Color Playground (aka Color Juggler)
 
 ![](img/color_juggle_logo.png)
 
@@ -17,7 +17,6 @@ It is not yet finished and need some refactoring.
   - In Hex
   - And RGB
 
-
 ## Issues
 - [x] Fix endless loop
 - [x] Fix main transition
@@ -28,12 +27,12 @@ It is not yet finished and need some refactoring.
 - [x] Fix Button colors
 - [x] Styling the header
 - [x] Fix transitions
-- [ ] Working on Responsivness
+- [x] Working on Responsivness
+- [x] Include a copy color function
 - [ ] Build Folder
 - [ ] Add UI functions as a prototype
 - [ ] Fix placholder input text
 - [ ] Remove Skeleton
 - [ ] Main Container
   - [ ] 4, 5 or 9 boxes
-  - [ ] Include a copy color function
 - [ ] Minify
