@@ -13,6 +13,14 @@ const inputloopSpeed = document.getElementById('inputLoopSpeed');
 const header = document.getElementById('header');
 
 function init() {
+	// document.addEventListener('DOMContentLoaded', function() {
+	// 	const cover = document.querySelector('#cover');
+	// 	cover.style.transform = 'translateY(0)';
+	// });
+	setTimeout(() => {
+		const cover = document.querySelector('#cover');
+		cover.style.transform = 'translateY(0)';
+	}, 1000);
 	showAlert('Press the button or set a loop!', 'note', 5000);
 	if (window.innerHeight >= 1024) {
 		setTimeout(() => {

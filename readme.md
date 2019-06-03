@@ -29,6 +29,7 @@ It is not yet finished and need some refactoring.
 - [x] Fix transitions
 - [x] Working on Responsivness
 - [x] Include a copy color function
+  - [ ] Built mobile functionality
 - [ ] Build Folder
 - [ ] Add UI functions as a prototype
 - [ ] Fix placholder input text

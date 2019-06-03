@@ -13,7 +13,10 @@
 }
 
 body {
-	height: 100vh;
+	position: relative;
+	background-color: whitesmoke;
+	z-index: 2;
+	height: 100%;
 	font-size: 2rem;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -36,8 +39,12 @@ body {
 	transition: background-color .75s ease-in-out;
 }
 
-@media (max-width: 414px) {
-	body {
-		padding-top: 2vh;
-	}
+#cover {
+	padding-top: 2vh;
+	width: 100vw;
+	height: 100vh;
+	background-color: whitesmoke;
+	transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+	z-index: 99;
+	transform: translateY(100vh);
 }

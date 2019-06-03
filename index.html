@@ -13,28 +13,30 @@
   <title>Color Playground</title>
 </head>
 <body onload="init()">
-  <img src="img/color_juggle_logo.png" id="logo" alt="Logo">
-  <div class="container">
-    <h1 id="header">Color Juggler</h1>
-      <div id="colorBox" onclick="changeBackground()">
-        <h1>Press me 👆</h1>
-        <p class="colorBoxColorDisplay">RGB(35,35,35)</p>
-        <p id="colorBoxText">Loop Speed: <strong><span id="outputLoopSpeed"></span></strong> ms!</p>
-        <!-- <button onclick="copyColor()" id="btnCopyColor" class="btn">Copy Color</button> -->
-      </div>
-      <div id="interface">
-        <div id="alertBox">
-          <p id="alertText"></p>
+  <div id="cover">
+    <img src="img/color_juggle_logo.png" id="logo" alt="Logo">
+    <div class="container">
+      <h1 id="header">Color Juggler</h1>
+        <div id="colorBox" onclick="changeBackground()">
+          <h1>Press me 👆</h1>
+          <p class="colorBoxColorDisplay">RGB(35,35,35)</p>
+          <p id="colorBoxText">Loop Speed: <strong><span id="outputLoopSpeed"></span></strong> ms!</p>
+          <!-- <button onclick="copyColor()" id="btnCopyColor" class="btn">Copy Color</button> -->
         </div>
-        <div id="interfaceSecondLine">
-          <input type="number" id="inputLoopSpeed" placeholder="Enter a loop speed in ms">
-          <button id="btnCopyColor"><i class="fas fa-copy"></i></button>
+        <div id="interface">
+          <div id="alertBox">
+            <p id="alertText"></p>
+          </div>
+          <div id="interfaceSecondLine">
+            <input type="number" id="inputLoopSpeed" placeholder="Enter a loop speed in ms">
+            <button id="btnCopyColor"><i class="fas fa-copy"></i></button>
+          </div>
+          <button onclick="loopColorBox()" id="btnStartLoop" class="btn">Start Loop!</button>
+          <button id="btnClearLoop" class="btn">Stop Loop</button>
+          
         </div>
-        <button onclick="loopColorBox()" id="btnStartLoop" class="btn">Start Loop!</button>
-        <button id="btnClearLoop" class="btn">Stop Loop</button>
-        
       </div>
-    </div>
+  </div>
   
   <script src="js/app.js"></script>
 
