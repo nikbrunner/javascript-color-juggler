@@ -34,6 +34,13 @@
 	border: 0;
 }
 
+#github-links {
+	margin-top: 25px;
+	/* display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center; */
+}
+
 @media (max-width: 1024px) {
 	#btnCopyColor {
 		display: none;
