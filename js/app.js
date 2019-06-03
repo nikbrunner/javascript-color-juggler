@@ -2,20 +2,20 @@ const alertBox = document.getElementById('alertBox');
 const alertText = document.getElementById('alertText');
 const body = document.querySelector('body');
 const btnClearLoop = document.getElementById('btnClearLoop');
-const btnCopyColor = document.getElementById('btnCopyColor');
 const btnStartLoop = document.getElementById('btnStartLoop');
+const btnCopyColor = document.getElementById('btnCopyColor');
 const colorBox = document.getElementById('colorBox');
-const colorBoxColorDisplay = document.querySelector('#outputLoopSpeed');
 const colorBoxHeader = document.querySelector('#colorBox h1');
-const colorBoxSubheader = document.querySelector('#colorBox h2');
-const colorBoxText = document.querySelector('#colorBox p');
+const colorBoxColorDisplay = document.querySelector('.colorBoxColorDisplay');
+const colorBoxSpeedDisplay = document.querySelector('#outputLoopSpeed');
+const colorBoxText = document.querySelector('#colorBoxText');
 const inputloopSpeed = document.getElementById('inputLoopSpeed');
 const header = document.getElementById('header');
 
 function init() {
 	showAlert('Press the button or set a loop!', 'note', 5000);
 	setTimeout(() => {
-		showAlert('Touch the RGB Value to copy it!', 'note', 5000);
+		showAlert('Also use the copy button! ⬇️', 'note', 5000);
 	}, 5500);
 	btnClearLoop.style.display = 'none';
 	colorBoxText.style.display = 'none';
@@ -32,26 +32,41 @@ function changeBackground() {
 	const color = getColor();
 	header.style.color = color;
 	colorBox.style.backgroundColor = color;
-	colorBoxSubheader.innerHTML = `${color.toUpperCase()}`;
+	btnCopyColor.style.backgroundColor = 'initial';
+	colorBoxColorDisplay.innerHTML = `${color.toUpperCase()}`;
 	adjustColorsByLum(color);
 }
 
-colorBoxSubheader.addEventListener('click', copyColor);
+// colorBoxColorDisplay.addEventListener('click', copyColor);
+btnCopyColor.addEventListener('click', btnCopy);
 
-function copyColor(color) {
-	if (color.target.className === 'colorBoxColorDisplay') {
-		const colorValue = color.target.innerText;
-		const copiedColor = document.createElement('input');
-		// copiedColor.style.display = 'none';
-		document.body.appendChild(copiedColor);
-		copiedColor.value = colorValue;
-		copiedColor.select();
-		document.execCommand('copy');
-		document.body.removeChild(copiedColor);
-		alertBox.style.backgroundColor = colorValue;
-		showAlert(`${colorValue} copied!`, 'success', 3000);
-	}
+function btnCopy() {
+	console.log(colorBoxColorDisplay.textContent);
+	const currentColorValue = colorBoxColorDisplay.textContent;
+	const tempInput = document.createElement('input');
+	document.body.appendChild(tempInput);
+	tempInput.value = currentColorValue;
+	tempInput.select();
+	document.execCommand('copy');
+	document.body.removeChild(tempInput);
+	alertBox.style.backgroundColor = currentColorValue;
+	btnCopyColor.style.backgroundColor = currentColorValue;
+	showAlert(`${currentColorValue} copied!`, 'success', 3000);
 }
+
+// function copyColor(color) {
+// 	if (color.target.className === 'colorBoxColorDisplay') {
+// 		const colorValue = color.target.innerText;
+// 		const copiedColor = document.createElement('input');
+// 		document.body.appendChild(copiedColor);
+// 		copiedColor.value = colorValue;
+// 		copiedColor.select();
+// 		document.execCommand('copy');
+// 		document.body.removeChild(copiedColor);
+// 		alertBox.style.backgroundColor = colorValue;
+// 		showAlert(`${colorValue} copied!`, 'success', 3000);
+// 	}
+// }
 
 function randomColor() {
 	const r = Math.floor(Math.random() * 256); // pick a "red" from 0 - 255
@@ -74,10 +89,11 @@ function adjustColorsByLum(color) {
 	if (luminance > 500) {
 		body.style.backgroundColor = '#232323';
 		alertBox.style.color = '#232323';
+		btnCopyColor.style.color = 'whitesmoke';
 		colorBoxHeader.style.color = '#232323';
-		colorBoxSubheader.style.color = '#232323';
-		colorBoxText.style.color = '#232323';
 		colorBoxColorDisplay.style.color = '#232323';
+		colorBoxText.style.color = '#232323';
+		colorBoxSpeedDisplay.style.color = '#232323';
 	} else {
 		body.style.backgroundColor = 'whitesmoke';
 		if (alertBox.classList.contains('note')) {
@@ -85,10 +101,11 @@ function adjustColorsByLum(color) {
 		} else {
 			alertBox.style.color = 'whitesmoke';
 		}
+		btnCopyColor.style.color = '#232323';
 		colorBoxHeader.style.color = 'whitesmoke';
-		colorBoxSubheader.style.color = 'whitesmoke';
-		colorBoxText.style.color = 'whitesmoke';
 		colorBoxColorDisplay.style.color = 'whitesmoke';
+		colorBoxText.style.color = 'whitesmoke';
+		colorBoxSpeedDisplay.style.color = 'whitesmoke';
 	}
 }
 
@@ -127,7 +144,7 @@ function loopColorBox() {
 
 		showAlert(`Loop set with a speed of ${inputloopSpeed.value} ms!`, 'success', 3000);
 
-		colorBoxColorDisplay.innerText = inputloopSpeed.value;
+		colorBoxSpeedDisplay.innerText = inputloopSpeed.value;
 		colorBoxHeader.innerHTML = '🔁';
 		colorBoxText.style.display = 'block';
 		btnClearLoop.style.display = 'block';

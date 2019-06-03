@@ -41,7 +41,7 @@
 	font-size: 5rem;
 }
 
-#colorBox h2 {
+.colorBoxColorDisplay {
 	letter-spacing: .1rem;
 	font-weight: 600;
 }

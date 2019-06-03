@@ -3,8 +3,7 @@
 @import 'logo.css';
 @import 'colorbox.css';
 @import 'header.css';
-@import 'alertbox.css';
-@import 'inputLoopSpeed.css';
+@import 'interface.css';
 
 * {
 	margin: 0;

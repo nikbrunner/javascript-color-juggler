@@ -8,6 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/skeleton.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:600,900&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <title>Color Playground</title>
 </head>
@@ -18,15 +19,19 @@
     <!-- <p id="subheader">Practice for me. Fun for you. 😉</p> -->
       <div id="colorBox" onclick="changeBackground()">
         <h1>Press me 👆</h1>
-        <h2 class="colorBoxColorDisplay">RGB(35,35,35)</h2>
-        <p>Loop Speed: <strong><span id="outputLoopSpeed"></span></strong> ms!</p>
+        <!-- <h2 class="colorBoxColorDisplay">RGB(35,35,35)</h2> -->
+        <p class="colorBoxColorDisplay">RGB(35,35,35)</p>
+        <p id="colorBoxText">Loop Speed: <strong><span id="outputLoopSpeed"></span></strong> ms!</p>
         <!-- <button onclick="copyColor()" id="btnCopyColor" class="btn">Copy Color</button> -->
       </div>
       <div id="interface">
         <div id="alertBox">
           <p id="alertText"></p>
         </div>
-        <input type="number" id="inputLoopSpeed" placeholder="Enter a loop speed in milliseconds">
+        <div id="interfaceSecondLine">
+          <input type="number" id="inputLoopSpeed" placeholder="Enter a loop speed in ms">
+          <button id="btnCopyColor"><i class="fas fa-copy"></i></button>
+        </div>
         <button onclick="loopColorBox()" id="btnStartLoop" class="btn">Start Loop!</button>
         <button id="btnClearLoop" class="btn">Stop Loop</button>
         

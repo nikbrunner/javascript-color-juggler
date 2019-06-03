@@ -5,6 +5,7 @@
 	font-size: 2rem;
 	font-family: 'Montserrat', sans-serif;
 	border: 0;
+	transition: color .15s ease-in;
 }
 
 .btn:hover {
@@ -25,4 +26,10 @@
 #btnClearLoop {
 	background-color: crimson;
 	color: whitesmoke;
+}
+
+#btnCopyColor {
+	height: 100%;
+	font-size: 4rem;
+	border: 0;
 }
