@@ -24,7 +24,8 @@ It is not yet finished and need some refactoring.
   - [x] HTML
 - [x] Better Class Names and IDs
 - [x] Fix Button colors
-- [ ] Hide input and alert box space when starting loop
+- [x] Styling the header
+- [ ] Fix transitions
 - [ ] Build Folder
 - [ ] Add UI functions as a prototype
 - [ ] Fix placholder input text

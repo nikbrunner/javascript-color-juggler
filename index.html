@@ -12,6 +12,11 @@
 </head>
 <body onload="init()">
   <div class="container">
+    <div id="logo">
+      <span id="fruitOne">🍓</span>  
+      <span id="fruitTwo">🥝</span>  
+      <span id="fruitThree">🍈</span>  
+    </div>
     <h1 id="header">Color Playground</h1>
     <p id="subheader">This is practice for me and fun for you 😉</p>
       <div id="colorBox" onclick="changeBackground()">
@@ -20,15 +25,13 @@
         <p>Loop Speed: <strong><span id="outputLoopSpeed"></span></strong> ms!</p>
         <!-- <button onclick="copyColor()" id="btnCopyColor" class="btn">Copy Color</button> -->
       </div>
-      <div id="alertBox">
-        <p id="alertText"></p>
-      </div>
-      <div id="loopInterface">
-        <input type="number" id="inputLoopSpeed" placeholder="Enter a loop speed in milliseconds">
-        <div id="loopInterfaceButtons">
-          <button onclick="loopColorBox()" id="btnStartLoop" class="btn">Start Loop!</button>
-          <button id="btnClearLoop" class="btn">Stop Loop</button>
+      <div id="interface">
+        <div id="alertBox">
+          <p id="alertText"></p>
         </div>
+        <input type="number" id="inputLoopSpeed" placeholder="Enter a loop speed in milliseconds">
+        <button onclick="loopColorBox()" id="btnStartLoop" class="btn">Start Loop!</button>
+        <button id="btnClearLoop" class="btn">Stop Loop</button>
       </div>
     </div>
   

@@ -1,16 +1,8 @@
-button {
-	-webkit-transition: background-color .75s ease-in-out;
-	transition: background-color .75s ease-in-out;
-}
-
-#btnStartLoop {
-	background-color: mediumseagreen;
-	color: whitesmoke;
-}
-
-#btnClearLoop {
-	background-color: crimson;
-	color: whitesmoke;
+.btn {
+	margin-bottom: 10px;
+	height: 50px;
+	width: 100%;
+	font-size: 2rem;
 }
 
 .btn:hover {
@@ -23,23 +15,12 @@ button {
 	box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
 }
 
-#btnChangeBG {
-	width: 100%;
-	margin: 10px auto;
+#btnStartLoop {
+	background-color: mediumseagreen;
+	color: whitesmoke;
 }
 
-#loopInterfaceButtons {
-	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 50px;
-	grid-gap: 10px;
-	height: 50px;
-	font-size: 1rem;
-	margin-bottom: 10px;
-}
-
-#loopInterfaceButtons button {
-	height: 100%;
-	font-size: 2rem;
+#btnClearLoop {
+	background-color: crimson;
+	color: whitesmoke;
 }
