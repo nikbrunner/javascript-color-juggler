@@ -12,13 +12,13 @@ It is not yet finished and need some refactoring.
 ## Issues
 - [x] Fix endless loop
 - [x] Fix main transition
-- [ ] Better Class Names and IDs
-- [ ] Minify
-- [ ] Build Folder
-- [ ] Fix placholder input text
 - [ ] Fix Color Display
   - [ ] JS
   - [ ] HTML
+- [ ] Better Class Names and IDs
+- [ ] Build Folder
+- [ ] Minify
+- [ ] Fix placholder input text
 - [ ] Remove Skeleton
 - [ ] Main Container
   - [ ] 4, 5 or 9 boxes
