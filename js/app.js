@@ -88,7 +88,6 @@ function adjustColorsByLum(color) {
 	if (luminance > 500) {
 		body.style.backgroundColor = '#232323';
 		alertBox.style.color = '#232323';
-		// btnCopyColor.style.color = '#232323';
 		colorBoxHeader.style.color = '#232323';
 		colorBoxColorDisplay.style.color = '#232323';
 		colorBoxText.style.color = '#232323';
@@ -100,7 +99,6 @@ function adjustColorsByLum(color) {
 		} else {
 			alertBox.style.color = 'whitesmoke';
 		}
-		// btnCopyColor.style.color = 'whitesmoke';
 		colorBoxHeader.style.color = 'whitesmoke';
 		colorBoxColorDisplay.style.color = 'whitesmoke';
 		colorBoxText.style.color = 'whitesmoke';

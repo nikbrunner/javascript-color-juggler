@@ -5,16 +5,21 @@
 	font-size: 2rem;
 	font-family: 'Montserrat', sans-serif;
 	border: 0;
+	-webkit-transition: color .15s ease-in;
 	transition: color .15s ease-in;
 }
 
 .btn:hover {
+	-webkit-transform: translateY(-3px);
 	transform: translateY(-3px);
+	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
 	box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
 }
 
 .btn:active {
+	-webkit-transform: translateY(-1px);
 	transform: translateY(-1px);
+	-webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
 	box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
 }
 
