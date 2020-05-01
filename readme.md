@@ -1,4 +1,4 @@
-# Color Playground (aka Color Juggler)
+# Color Juggler
 
 ![](img/color_juggle_logo.png)
 
@@ -16,26 +16,3 @@ It is not yet finished and need some refactoring.
 - Ability to copy color codes 
   - In Hex
   - And RGB
-
-## Issues
-- [x] Fix endless loop
-- [x] Fix main transition
-- [x] Fix Color Display
-  - [x] JS
-  - [x] HTML
-- [x] Better Class Names and IDs
-- [x] Fix Button colors
-- [x] Styling the header
-- [x] Fix transitions
-- [x] Working on Responsivness
-- [x] Include a copy color function
-  - [ ] Built mobile functionality
-- [x] FavIcon
-- [ ] Fix color contrast on desktop
-- [ ] Build Folder
-- [ ] Add UI functions as a prototype
-- [ ] Fix placholder input text
-- [ ] Remove Skeleton
-- [ ] Main Container
-  - [ ] 4, 5 or 9 boxes
-- [ ] Minify
